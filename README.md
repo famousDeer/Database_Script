@@ -1,5 +1,6 @@
 # Recruitement Task
-- Dawid Trzciński
+- Created by: Dawid Trzciński
+- Email: dawidtrzcinski1@gmail.com
 
 ## Information
 The script allows operations in the database with predefined commands. Each of them, except the `create_databse` command, requires a login and password. Some commands require administrator privileges. Login can be your email or telephone number.
