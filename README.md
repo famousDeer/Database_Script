@@ -18,9 +18,10 @@ This action does not require login and password. It takes data from `data/` dire
 
 - Command: `python3 main.py create_database`
 - It will print information what were done
+- **IMPORTANT** It will only create database base on data files in directory it won't update any information that exists.
 
 ## Admin Actions
-This actions are for admin role.
+This actions are for admin role **ONLY**.
 - **Print total number of all valid accounts**
     - Command: `python3 main.py print-all-accounts --login <login> --password <password>`
     - It will print total number of users
@@ -29,5 +30,47 @@ This actions are for admin role.
         >python3 main.py print-all-accounts --login '123456789' --password '12ass$#s'
         23
     ```
+- **Print the oldest existing account**
+    - Command: `python3 main.py print-oldest-account --login <login> --password <password>`
+    - It will print name, email and date of creation of the oldest account
+    - Example:
+    ```bash
+        >python3 main.py print-oldest-account --login '123456789' --password '12sdf#@'
+        name: Adam
+        email_address: Adam@test.com
+        created_at: 2001-01-23 14:14:14
+    ```
+- **Print grouped children by age**
+    - Command: `python3 main.py group-by-age --login <login> --password <password>`
+    - It will print grouped children by age and how many children are in specific age in ascending order
+    - Example:
+    ```bash
+        >python3 main.py group-by-age --login '123456789' --password '123sdf#@$'
+        age: 10, count: 5
+        age: 5,  count: 6
+        age: 12, count: 10
+    ```
+
+## User Actions
+This actions are for admin and user role.
+- **Print user children**
+    - Command: `python3 main.py print-children --login <login> --password <password>`
+    - It will print user children
+    - Example:
+    ```bash
+        >python3 main.py print-children --login '123456789' --password '123AF#@D'
+        Adam, 10
+        Steve, 12
+    ```
+- **Find users with children of same age**
+    - Command: `python3 main.py find-similar-children-by-age --login <login> --password <password>`
+    - It will print user name, telephone number and children. Base on user children age will find at least one in other users children.
+    - Example:
+    ```bash
+        >python3 main.py find-similar-children-by-age --login '123456789' --password '12wxd#@'
+        Adam, 738467290: Steve, 10; Olive 12
+        John, 182934267: Adam, 2; Bart 9
+    ```
+
 
 
