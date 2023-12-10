@@ -8,11 +8,11 @@ This action does not require login and password. It takes data from `data/` dire
 ```
 ├── data
 │   └── YOUR DATA HERE
-├── main.py
 ├── utils
 │   └── utils.py
 ├── test
 │   └── test.py
+├── main.py
 └── README.md
 ```
 
