@@ -2,7 +2,7 @@
   {
     "firstname": "Justin",
     "telephone_number": "678762794",
-    "email": "opoole@example.org",
+    "email": "opooe@example.org",
     "password": "+3t)mSM6xX",
     "role": "admin",
     "created_at": "2022-11-25 02:19:37",
@@ -28,6 +28,20 @@
       {
         "name": "Anna",
         "age": 18
+      }
+    ]
+  },
+  {
+    "firstname": "Dawid",
+    "telephone_number": "000932435234",
+    "email": "dawidtrzcinski1@gmail.com",
+    "password": "xyz123",
+    "role": "admin",
+    "created_at": "1998-09-12 16:01:21",
+    "children": [
+      {
+        "name": "Xyz",
+        "age": 5
       }
     ]
   },
@@ -97,6 +111,9 @@
       {
         "name": "Sarah",
         "age": 10
+      },
+      {"name": "Adam",
+       "age": 13
       }
     ]
   },
@@ -205,6 +222,28 @@
       {
         "name": "Kristen",
         "age": 2
+      }
+    ]
+  },
+  {
+    "firstname": "Danny",
+    "telephone_number": "(48)342559287",
+    "email": "silvaarthur@example.com",
+    "password": "9q(6KpMuvS",
+    "role": "admin",
+    "created_at": "2023-06-09 07:47:58",
+    "children": [
+      {
+        "name": "Kimberly",
+        "age": 2
+      },
+      {
+        "name": "Sarah",
+        "age": 4
+      },
+      {
+        "name": "David",
+        "age": 3
       }
     ]
   },
