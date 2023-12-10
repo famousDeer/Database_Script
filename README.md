@@ -25,7 +25,9 @@ This actions are for admin role.
     - Command: `python3 main.py print-all-accounts --login <login> --password <password>`
     - It will print total number of users
     - Example: 
-
+    ```bash
         >python3 main.py print-all-accounts --login '123456789' --password '12ass$#s'
         23
+    ```
+
 
