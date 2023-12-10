@@ -300,7 +300,7 @@ class AccountManager:
             child_ages = [age for _, age in children]
             placeholder = ", ".join('?' for _ in child_ages)
             query = f"""
-                    SELECT u.firstname, u.telephone_number, c.child_name, c.child_age
+                    SELECT u.firstname, u.telephone_number, c.child_name, c.child_age, u.email
                     FROM users u
                     JOIN childs c ON u.user_id = c.user_id
                     WHERE c.child_age IN ({placeholder})
@@ -310,14 +310,17 @@ class AccountManager:
             # Prepare data for printing
             result_dict = {}
             for row in data:
-                
-                # Using (firstname, telephone_number) as the key
-                user_key = (row[0], row[1])
-                if user_key not in result_dict:
-                    result_dict[user_key] = []
+                # Prevent display user from login
+                if row[1] == self.login or row[4] == self.login:
+                    continue
+                else:
+                    # Using (firstname, telephone_number) as the key
+                    user_key = (row[0], row[1])
+                    if user_key not in result_dict:
+                        result_dict[user_key] = []
 
-                # Adding (child_name, child_age) to the list
-                result_dict[user_key].append((row[2], row[3]))  
+                    # Adding (child_name, child_age) to the list
+                    result_dict[user_key].append((row[2], row[3]))  
 
             # Format the results as strings
             formatted_results = []
