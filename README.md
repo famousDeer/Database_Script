@@ -16,10 +16,13 @@ This action does not require login and password. It takes data from `data/` dire
 ```
 ├── data
 │   └── YOUR DATA HERE
+├── env
+│   └── conda_environment.yml
 ├── utils
 │   └── utils.py
-├── main.py
-└── README.md
+├── .gitignore
+├── README.md
+└── main.py
 ```
 
 - Command: `python3 main.py create_database`
