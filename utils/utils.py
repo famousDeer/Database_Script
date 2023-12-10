@@ -244,9 +244,9 @@ class AccountManager:
                         FROM users
                         WHERE telephone_number = ? AND password = ?"""
                 self.login_type = 'telephone_number' 
-            role = cursor.execute(query, (self.login, self.password)).fetchone()
-            if role is None:
-                print("[Warning] Wrong login or password")
+            role = cursor.execute(query, (self.login, self.password)).fetchone()[0]
+            if role == '':
+                print("[Warning] You don't have any role in your record")
                 return None
         return role
     
