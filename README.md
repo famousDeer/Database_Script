@@ -10,8 +10,6 @@ This action does not require login and password. It takes data from `data/` dire
 │   └── YOUR DATA HERE
 ├── utils
 │   └── utils.py
-├── test
-│   └── test.py
 ├── main.py
 └── README.md
 ```
