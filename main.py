@@ -17,8 +17,6 @@ def main():
         role = manager.check_login_password()
         if role is None:
             return
-        else:
-            role = role[0]
     else:    
         if command == "create_database":
             db = CreateDatabase()
