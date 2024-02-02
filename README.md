@@ -1,7 +1,3 @@
-# Recruitement Task
-- Created by: Dawid Trzciński
-- Email: dawidtrzcinski1@gmail.com
-
 ## Environment
 In `env/` directory is `conda_environment.yml` file, that gives you every information about packages and python version were use for this project. Command below create conda environment:
 ```bash
